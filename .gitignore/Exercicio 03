@@ -1,0 +1,1391 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1. Faça um Programa que peça dois números e imprima o maior deles."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digite o primeiro numero 10\n",
+      "Digite o segundo numero 5\n",
+      "O primeiro numero digitado é maior: 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = input(\"Digite o primeiro numero \")\n",
+    "b = input(\"Digite o segundo numero \")\n",
+    " \n",
+    "\n",
+    "if b > a:\n",
+    "    print (\"O primeiro numero digitado é maior:\", a)\n",
+    "elif a > b:\n",
+    "    print(\"O segundo numero digitado é maior:\", b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um Programa que verifique se uma letra digitada é vogal ou consoante."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "vogais = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']\n",
+    "\n",
+    "letra = input(\"Digite uma letra: \")\n",
+    "\n",
+    "if letra in vogais:\n",
+    "    print (\"O caracter digitada é uma vogal:\", letra)\n",
+    "elif letra.isalpha():\n",
+    "    print (\"O caracter digitada é uma consoante:\", letra)\n",
+    "else:\n",
+    "    print (\"Não é uma letra\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa para a leitura de duas notas parciais de um aluno. O programa\n",
+    "deve calcular a média alcançada por aluno e apresentar:\n",
+    "- A mensagem \"Aprovado\", se a média alcançada for maior ou igual a sete;\n",
+    "- A mensagem \"Reprovado\", se a média for menor do que sete;\n",
+    "- A mensagem \"Aprovado com Distinção\", se a média for igual a dez."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Informe a primeira nota: 9\n",
+      "informe a segunda nota: 9\n",
+      "Aprovado! Nota= 9.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "nt1 = float(input(\"Informe a primeira nota: \"))\n",
+    "nt2 = float(input(\"informe a segunda nota: \"))\n",
+    "\n",
+    "media= float(nt1 + nt2)/2\n",
+    "\n",
+    "if media == 10.0:\n",
+    "    print(\"Aprovado com Distinção! Nota=\",media)\n",
+    "elif media >= 7.0:\n",
+    "    print(\"Aprovado! Nota=\",media)\n",
+    "elif media < 7.0:\n",
+    "    print(\"Reprovado! Nota=\",media)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um Programa que leia três números e mostre-os em ordem decrescente."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "informe o primeiro numero 10\n",
+      "informe o primeiro numero 20\n",
+      "informe o primeiro numero 5\n",
+      "[20, 10, 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = []\n",
+    "x = 1\n",
+    "while x <= 3:\n",
+    "    x += 1\n",
+    "    n.append (int(input(\"informe o primeiro numero \")))\n",
+    "\n",
+    "n.sort(reverse=True)\n",
+    "print (n)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "As Organizações Tabajara resolveram dar um aumento de salário aos seus\n",
+    "colaboradores e lhe contrataram para desenvolver o programa que calculará os\n",
+    "reajustes.\n",
+    "Faça um programa que recebe o salário de um colaborador e o reajuste segundo o\n",
+    "seguinte critério, baseado no salário atual:\n",
+    "    \n",
+    "- salários até R$ 280,00 (incluindo) : aumento de 20%\n",
+    "    \n",
+    "- salários entre R$ 280,00 e R$ 700,00 : aumento de 15%\n",
+    "    \n",
+    "- salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%\n",
+    "    \n",
+    "- salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado,\n",
+    "informe na tela:\n",
+    "    \n",
+    "- o salário antes do reajuste;\n",
+    "- o percentual de aumento aplicado;\n",
+    "- o valor do aumento;\n",
+    "- o novo salário, após o aumento."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Informe o valor do salário 100\n",
+      "Salario atual: R$ 100.0 \n",
+      "Recebeu um aumento de 20%\n",
+      "Valor em R$ do aumento: 20.0 \n",
+      "Salário final R$ 120.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "salr = float(input(\"Informe o valor do salário \"))\n",
+    "\n",
+    "\n",
+    "if salr <= 280:\n",
+    "    aumento = float (salr /100 * 20)\n",
+    "    print(\"Salario atual: R$\", salr, \n",
+    "          \"\\nRecebeu um aumento de 20%\"\n",
+    "          \"\\nValor em R$ do aumento:\", aumento,\n",
+    "          \"\\nSalário final R$\", aumento + salr)\n",
+    "    \n",
+    "elif salr >280 and salr <=700:\n",
+    "    aumento = float (salr /100 * 15)\n",
+    "    print(\"Salario atual: R$\", salr, \n",
+    "          \"\\nRecebeu um aumento de 15%\"\n",
+    "          \"\\nValor em R$ do aumento:\", aumento,\n",
+    "          \"\\nSalário final R$\", aumento + salr)\n",
+    "\n",
+    "elif salr >700 and salr <=1500:\n",
+    "    aumento = float (salr /100 * 10)\n",
+    "    print(\"Salario atual: R$\", salr, \n",
+    "          \"\\nRecebeu um aumento de 10% \"\n",
+    "          \"\\nValor em R$ do aumento: R$\", aumento,\n",
+    "          \"\\nSalário final R$\", aumento + salr)\n",
+    "elif salr > 1500:\n",
+    "    aumento = float (salr /100 * 5)\n",
+    "    print(\"Salario atual: R$\", salr, \n",
+    "          \"\\nRecebeu um aumento de 05% \"\n",
+    "          \"\\nValor em R$ do aumento: R$\", aumento,\n",
+    "          \"\\nSalário final R$\", aumento + salr)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um Programa que leia um número e exiba o dia correspondente da semana.\n",
+    "(1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digita o numero: 1\n",
+      "Domingo\n"
+     ]
+    }
+   ],
+   "source": [
+    "d = {'Domingo':1, 'Segunda':2, 'Terça':3, 'Quarta':4, 'Quinta':5, 'Sexta':6, 'Sabado':7}\n",
+    "\n",
+    "n = int(input(\"Digita o numero: \"))\n",
+    "\n",
+    "for s,i in d.items(): \n",
+    "    if i==n:\n",
+    "        print(s)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa que lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo: Média de Aproveitamento Conceito\n",
+    "\n",
+    "- Entre 9.0 e 10.0 A \n",
+    "- Entre 7.5 e 9.0 B \n",
+    "- Entre 6.0 e 7.5 C \n",
+    "- Entre 4.0 e 6.0 D \n",
+    "- Entre 4.0 e zero E\n",
+    "\n",
+    "O algoritmo deve mostrar na tela as notas, a média, o conceito correspondente e a mensagem “APROVADO” se o conceito for A, B ou C ou “REPROVADO” se o conceito for D ou E."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Informe a primeira nota: 7.4\n",
+      "informe a segunda nota: 7.4\n",
+      "Primeira Nota= 7.4 \n",
+      "Segunda Nota= 7.4 \n",
+      "Média= 7.4 \n",
+      "Aprovado (C)\n"
+     ]
+    }
+   ],
+   "source": [
+    "nt1 = float(input(\"Informe a primeira nota: \"))\n",
+    "nt2 = float(input(\"informe a segunda nota: \"))\n",
+    "\n",
+    "media= float(nt1 + nt2)/2\n",
+    "\n",
+    "if media >= 9.0 and media<10.0 :\n",
+    "    print(\"Primeira Nota=\",nt1,\n",
+    "         \"\\nSegunda Nota=\",nt2,\n",
+    "         \"\\nMédia=\",media,\n",
+    "         \"\\nAprovado (A)\")\n",
+    "elif media >= 7.5 and media < 9.0:\n",
+    "    print(\"Primeira Nota=\",nt1,\n",
+    "         \"\\nSegunda Nota=\",nt2,\n",
+    "         \"\\nMédia=\",media,\n",
+    "         \"\\nAprovado (B)\")\n",
+    "elif media >= 6.0 and media < 7.5:\n",
+    "    print(\"Primeira Nota=\",nt1,\n",
+    "         \"\\nSegunda Nota=\",nt2,\n",
+    "         \"\\nMédia=\",media,\n",
+    "         \"\\nAprovado (C)\")\n",
+    "elif media >= 4.0 and media < 6.0:\n",
+    "    print(\"Primeira Nota=\",nt1,\n",
+    "         \"\\nSegunda Nota=\",nt2,\n",
+    "         \"\\nMédia=\",media,\n",
+    "         \"\\nReprovado (D)\")\n",
+    "elif media >= 0.0 and media < 4.0:\n",
+    "    print(\"Primeira Nota=\",nt1,\n",
+    "         \"\\nSegunda Nota=\",nt2,\n",
+    "         \"\\nMédia=\",media,\n",
+    "         \"\\nReprovado (E)\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um Programa que peça os 3 lados de um triângulo. O programa deverá\n",
+    "informar se os valores podem ser um triângulo. Indique, caso os lados formem um\n",
+    "triângulo, se o mesmo é: equilátero, isósceles ou escaleno.\n",
+    "Dicas:\n",
+    "    \n",
+    "- Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;\n",
+    "- Triângulo Equilátero: três lados iguais;\n",
+    "- Triângulo Isósceles: quaisquer dois lados iguais;\n",
+    "- Triângulo Escaleno: três lados diferentes;"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "informe o lado do triangulo: 5\n",
+      "informe o lado do triangulo: 2\n",
+      "informe o lado do triangulo: 9\n",
+      "Não é um Triangulo\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = int(input(\"informe o lado do triangulo: \"))\n",
+    "b = int(input(\"informe o lado do triangulo: \"))\n",
+    "c = int(input(\"informe o lado do triangulo: \"))\n",
+    "\n",
+    "if a+b < c or b+c < a or c+a < b :\n",
+    "    print(\"Não é um Triangulo\")\n",
+    "\n",
+    "elif a==b and b==c:\n",
+    "    print (\"Triângulo Equilátero\")\n",
+    "\n",
+    "elif a==b or b==c or c==a:\n",
+    "    print (\"Triângulo Isósceles\")   \n",
+    "\n",
+    "elif a!=b and b!=c and c!=a:\n",
+    "    print (\"Triângulo Escaleno\")   \n",
+    "    \n",
+    "  \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa que calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. \n",
+    "O programa deverá pedir os valores de a, b e c e fazer as consistências, informando ao usuário nas seguintes situações:\n",
+    "\n",
+    "- Se o usuário informar o valor de A igual a zero, a equação não é do segundo grau e o programa não deve fazer pedir os demais valores, sendo encerrado;\n",
+    "- Se o delta calculado for negativo, a equação não possui raizes reais. Informe ao usuário e encerre o programa;\n",
+    "- Se o delta calculado for igual a zero a equação possui apenas uma raiz real; informe-a ao usuário;\n",
+    "- Se o delta for positivo, a equação possui duas raiz reais; informe-as ao usuário;"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Informe o valor de a: 1\n",
+      "Informe o valor de b: -5\n",
+      "Informe o valor de c: 6\n",
+      "A equação possui duas raízes pois o delta é positivo. Delta =  1 \n",
+      " Raízes  ( 5 , 2 )\n"
+     ]
+    }
+   ],
+   "source": [
+    "a= int(input(\"Informe o valor de a: \"))\n",
+    "\n",
+    "if a ==0:\n",
+    "    print(\"A equação não é do segundo grau\")\n",
+    "else:    \n",
+    "    b=int(input(\"Informe o valor de b: \"))\n",
+    "    c=int(input(\"Informe o valor de c: \"))\n",
+    "    \n",
+    "delta = (b**2)-(4*a*c)\n",
+    "\n",
+    "\n",
+    "if  delta < 0:\n",
+    "    print(\"A equação não possui raízes, pois o Delta é negativo. Delta =\",delta)\n",
+    "\n",
+    "elif delta == 0:\n",
+    "    print(\"A equação possui apenas uma raiz, pois o delta é 0. Raíz = \", delta)\n",
+    "\n",
+    "elif delta > 0:\n",
+    "    raiz1 =int((-b + (delta**1/2))/2*a)  \n",
+    "    raiz2 =int((-b - (delta**1/2))/2*a)\n",
+    "\n",
+    "    print(\"A equação possui duas raízes pois o delta é positivo. Delta = \", delta,\n",
+    "        \"\\n Raízes \", \"(\",raiz1,\",\",raiz2,\")\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um Programa para um caixa eletrônico. \n",
+    "O programa deverá perguntar ao usuário a valor do saque e depois informar quantas notas de cada valor serão fornecidas. \n",
+    "As notas disponíveis serão as de 1, 5, 10, 50 e 100 reais. O valor mínimo é de 10 reais e o máximo de 600 reais. \n",
+    "O programa não deve se preocupar com a quantidade de notas existentes na máquina.\n",
+    "\n",
+    "- Exemplo 1: Para sacar a quantia de 256 reais, o programa fornece duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de 1;\n",
+    "- Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece três notas de 100, uma nota de 50, quatro notas de 10, uma nota de 5 e quatro notas de 1."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Informe o valor do saque: 378\n",
+      "Você receberá 3 notas de R$100,00 \n",
+      "Você receberá 1 notas de R$50,00 \n",
+      "Você receberá 2 notas de R$10,00 \n",
+      "Você receberá 1 notas de R$5,00 \n",
+      "Você receberá 3 notas de R$1,00\n"
+     ]
+    }
+   ],
+   "source": [
+    "saque = float(input(\"Informe o valor do saque: \"))\n",
+    "i = 0\n",
+    "j = 0\n",
+    "k = 0\n",
+    "l = 0\n",
+    "m = 0\n",
+    "while saque >= 100:\n",
+    "    i =i+1\n",
+    "    saque = saque-100\n",
+    "    \n",
+    "while saque >= 50:\n",
+    "    j=j+1\n",
+    "    saque = saque-50\n",
+    "    \n",
+    "while saque >= 10:\n",
+    "    k =k+1\n",
+    "    saque = saque-10\n",
+    "    \n",
+    "while saque >= 5:\n",
+    "    l =l+1\n",
+    "    saque = saque-5\n",
+    "\n",
+    "while saque >= 1:\n",
+    "    m =m+1\n",
+    "    saque = saque-1\n",
+    "\n",
+    "\n",
+    "\n",
+    "print(\"Você receberá\", i, \"notas de R$100,00\",\n",
+    "     \"\\nVocê receberá\",j, \"notas de R$50,00\",\n",
+    "     \"\\nVocê receberá\",k, \"notas de R$10,00\",\n",
+    "     \"\\nVocê receberá\",l, \"notas de R$5,00\",\n",
+    "     \"\\nVocê receberá\",m, \"notas de R$1,00\",)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa que faça 5 perguntas para uma pessoa sobre um crime. \n",
+    "\n",
+    "As perguntas são: \n",
+    "-\"Telefonou para a vítima?\" \n",
+    "-\"Esteve no local do crime?\" \n",
+    "-\"Mora perto da vítima?\" \n",
+    "-\"Devia para a vítima?\"\n",
+    "-\"Já trabalhou com a vítima?\" \n",
+    "\n",
+    "O programa deve no final emitir uma classificação sobre a participação da pessoa no crime.\n",
+    "Se a pessoa responder positivamente a 2 questões ela deve ser classificada como \"Suspeita\", entre 3 e 4 como \"Cúmplice\" e 5 como \"Assassino\". Caso contrário, ele será classificado como \"Inocente\"."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Telefonou para a vitima? k\n",
+      "Resposta invalida! Digite sim ou nao.\n",
+      "Telefonou para a vitima? nao\n",
+      "Esteve no local do crime? nao\n",
+      "Mora perto da vítima? nao\n",
+      "Devia para a vítima? sim\n",
+      "Já trabalhou com a vítima? nao\n",
+      "Classificação: Inocente\n"
+     ]
+    }
+   ],
+   "source": [
+    "rs=0\n",
+    "rn=0\n",
+    "pg1 = input(\"Telefonou para a vitima? \")\n",
+    "\n",
+    "while (pg1 != 'sim' or 'nao' ):\n",
+    "\n",
+    "    if pg1 == 'sim':\n",
+    "        rs=rs+1\n",
+    "        break\n",
+    "    elif pg1 == 'nao':\n",
+    "        rn=rn+1\n",
+    "        break\n",
+    "    else:\n",
+    "        print (\"Resposta invalida! Digite sim ou nao.\")\n",
+    "        pg1 = input(\"Telefonou para a vitima? \")\n",
+    "        \n",
+    "pg2 = input(\"Esteve no local do crime? \")\n",
+    "\n",
+    "while (pg2 != 'sim' or 'nao'):\n",
+    "\n",
+    "    if pg2 == 'sim':\n",
+    "        rs=rs+1\n",
+    "        break\n",
+    "    elif pg2 == 'nao':\n",
+    "        rn=rn+1\n",
+    "        break\n",
+    "    else:\n",
+    "        print (\"Resposta invalida! Digite sim ou nao.\")\n",
+    "        pg2 = input(\"Esteve no local do crime? \")\n",
+    "        \n",
+    "pg3 = input(\"Mora perto da vítima? \")\n",
+    "while (pg3 != 'sim' or 'nao'):\n",
+    "\n",
+    "    if pg3 == 'sim':\n",
+    "        rs=rs+1\n",
+    "        break\n",
+    "    elif pg3 == 'nao':\n",
+    "        rn=rn+1\n",
+    "        break\n",
+    "    else:\n",
+    "        print (\"Resposta invalida! Digite sim ou nao.\")\n",
+    "        pg3 = input(\"Mora perto da vítima? \")\n",
+    "        \n",
+    "pg4 = input(\"Devia para a vítima? \")\n",
+    "while (pg4 != 'sim' or 'nao'):\n",
+    "\n",
+    "    if pg4 == 'sim':\n",
+    "        rs=rs+1\n",
+    "        break\n",
+    "    elif pg4 == 'nao':\n",
+    "        rn=rn+1\n",
+    "        break\n",
+    "    else:\n",
+    "        print (\"Resposta invalida! Digite sim ou nao.\")\n",
+    "        pg4 = input(\"Devia para a vítima? \")\n",
+    "        \n",
+    "pg5 = input(\"Já trabalhou com a vítima? \")\n",
+    "while (pg5 != 'sim' or 'nao'):\n",
+    "\n",
+    "    if pg5 == 'sim':\n",
+    "        rs=rs+1\n",
+    "        break\n",
+    "    elif pg5 == 'nao':\n",
+    "        rn=rn+1\n",
+    "        break\n",
+    "    else:\n",
+    "        print (\"Resposta invalida! Digite sim ou nao.\")\n",
+    "        pg5 = input(\"Já trabalhou com a vítima? \")\n",
+    "        \n",
+    "if rs == 2:\n",
+    "    print (\"Classificação: Suspeito\")\n",
+    "elif rs == 3 or rs == 4:\n",
+    "    print (\"Classificação: Cumplice\")\n",
+    "elif rs == 5:\n",
+    "    print (\"Classificação: Assassino\")\n",
+    "elif rs < 2:\n",
+    "    print (\"Classificação: Inocente\")\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Uma fruteira está vendendo frutas com a seguinte tabela de preços: \n",
+    "                     - Até 5 Kg               Acima de 5 \n",
+    "    -Kg Morango      R$ 2,50 por Kg          R$ 2,20 por Kg \n",
+    "    -Maçã            R$ 1,80 por Kg          R$ 1,50 por Kg \n",
+    "Se o cliente comprar mais de 8 Kg em frutas ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Informe a qtd de morango em kg que deseja adquirir: 8\n",
+      "Informe a qtd de maçã em kg que deseja adquirir: 1\n",
+      "Total a pagar R$: 17.19\n"
+     ]
+    }
+   ],
+   "source": [
+    "mor = float(input(\"Informe a qtd de morango em kg que deseja adquirir: \"))\n",
+    "ma = float(input(\"Informe a qtd de maçã em kg que deseja adquirir: \"))\n",
+    "\n",
+    "total =float(mor+ma)\n",
+    "\n",
+    "if total <= 5:\n",
+    "    mor = mor*2.5\n",
+    "    ma = ma*1.8 \n",
+    "    print(\"Total a pagar R$:\",mor+ma)\n",
+    "\n",
+    "elif total > 5 and total < 8:\n",
+    "    mor = mor*2.2\n",
+    "    ma = ma*1.5\n",
+    "    print(\"Total a pagar R$:\",mor+ma)\n",
+    "    \n",
+    "elif total > 8 or ( mor*2.2)+(ma*1.5) > 25.0:\n",
+    "    mor = mor*2.2\n",
+    "    ma = ma*1.5\n",
+    "    desc = (mor+ma)*0.1\n",
+    "    print(\"Total a pagar R$:\",(mor+ma)-desc)\n",
+    "\n",
+    "    \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido. \n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digite uma nota de 0 à 10: 100\n",
+      "Valor inválido. Digite um número de 0 à 10\n",
+      "Digite uma nota de 0 à 10: 80\n",
+      "Valor inválido. Digite um número de 0 à 10\n",
+      "Digite uma nota de 0 à 10: 11\n",
+      "Valor inválido. Digite um número de 0 à 10\n",
+      "Digite uma nota de 0 à 10: 12\n",
+      "Valor inválido. Digite um número de 0 à 10\n",
+      "Digite uma nota de 0 à 10: 10\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "nota = int(input(\"Digite uma nota de 0 à 10: \"))\n",
+    "\n",
+    "while nota < 0 or nota > 10:\n",
+    "    print(\"Valor inválido. Digite um número de 0 à 10\")\n",
+    "    nota = int(input(\"Digite uma nota de 0 à 10: \"))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "\n",
+    "Faça um programa que leia e valide as seguintes informações: \n",
+    "    \n",
+    "-Nome: maior que 3 caracteres; \n",
+    "\n",
+    "-Idade: entre 0 e 150; \n",
+    "\n",
+    "-Salário: maior que zero; \n",
+    "\n",
+    "-Sexo: 'f' ou 'm'; \n",
+    "\n",
+    "-Estado Civil: 's', 'c', 'v', 'd'; "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "ename": "IndentationError",
+     "evalue": "expected an indented block (<ipython-input-4-c207a960fc4c>, line 27)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  File \u001b[1;32m\"<ipython-input-4-c207a960fc4c>\"\u001b[1;36m, line \u001b[1;32m27\u001b[0m\n\u001b[1;33m    civil = input(\"Digite o estado civil: \")\u001b[0m\n\u001b[1;37m        ^\u001b[0m\n\u001b[1;31mIndentationError\u001b[0m\u001b[1;31m:\u001b[0m expected an indented block\n"
+     ]
+    }
+   ],
+   "source": [
+    "nome = input(\"Digite o seu nome: \")\n",
+    "tam = len(nome)\n",
+    "\n",
+    "while tam <= 3:\n",
+    "    print(\"O nome deve conter mais que 3 letras\")\n",
+    "    nome = input(\"Digite o seu nome: \")\n",
+    "    tam= len(nome)\n",
+    "\n",
+    "idade = int(input(\"Digite sua idade: \"))\n",
+    "\n",
+    "while idade < 0 or idade > 150:\n",
+    "    print(\"Idade invalida\")\n",
+    "    idade = int(input(\"Digite sua idade: \"))\n",
+    "\n",
+    "slr = int(input(\"Informe o salário: \"))\n",
+    "\n",
+    "while slr <= 0:\n",
+    "    print(\"Salario deve ser maior que 0\")\n",
+    "    slr = int(input(\"Informe o salário: \"))\n",
+    "\n",
+    "sexo = input(\"Digite o sexo (f-feminino, m-masculino): \")\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "civil = input(\"Digite o estado civil: \")\n",
+    "\n",
+    "while sexo != 's' or 'c' or 'v' or 'd':\n",
+    "    print(\"Estado civil invalido\")\n",
+    "    civil = input(\"Digite o estado civil: \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "if (sexo != 'f' or 'm'):\n",
+    "    while (sexo != 'f' or 'm'):\n",
+    "        print(\"Sexo invalido\")\n",
+    "        sexo = input(\"Digite o sexo (f-feminino, m-masculino): \")\n",
+    "        if (sexo == 'f' or 'm'):\n",
+    "            break"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "while (sexo != 'f' or 'm'):\n",
+    "    print(\"Sexo invalido\")\n",
+    "    sexo = input(\"Digite o sexo (f-feminino, m-masculino): \")\n",
+    "    \n",
+    "    if sexo == 'f' or 'm':\n",
+    "        break\n",
+    "    else:\n",
+    "        continue"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa que leia 5 números e informe o maior número. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digite um numero: 1\n",
+      "Digite um numero: 2\n",
+      "Digite um numero: 3\n",
+      "Digite um numero: 4\n",
+      "Digite um numero: 1\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "i = 0\n",
+    "maior = 0\n",
+    "while i < 5:\n",
+    "    num = int(input(\"Digite um numero: \"))\n",
+    "    i=i+1\n",
+    "    \n",
+    "    if num > maior:\n",
+    "        maior = num\n",
+    "        \n",
+    "print(maior)   "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa que leia 5 números e informe a soma e a média dos números. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digite um numero: 5\n",
+      "Digite um numero: 4\n",
+      "Digite um numero: 10\n",
+      "Digite um numero: 9\n",
+      "Digite um numero: 3\n",
+      "Soma: 31 \n",
+      "Média: 6.2\n"
+     ]
+    }
+   ],
+   "source": [
+    "i = 0\n",
+    "soma = 0\n",
+    "media = 0\n",
+    "while i < 5:\n",
+    "    num = int(input(\"Digite um numero: \"))\n",
+    "    i=i+1\n",
+    "    \n",
+    "    soma = soma+num\n",
+    "\n",
+    "media = soma/5      \n",
+    "print(\"Soma:\", soma,\n",
+    "     \"\\nMédia:\", media) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "3\n",
+      "5\n",
+      "7\n",
+      "9\n",
+      "11\n",
+      "13\n",
+      "15\n",
+      "17\n",
+      "19\n",
+      "21\n",
+      "23\n",
+      "25\n",
+      "27\n",
+      "29\n",
+      "31\n",
+      "33\n",
+      "35\n",
+      "37\n",
+      "39\n",
+      "41\n",
+      "43\n",
+      "45\n",
+      "47\n",
+      "49\n"
+     ]
+    }
+   ],
+   "source": [
+    "for num in range(50):\n",
+    "    if num % 2 != 0:\n",
+    "        print(num)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. \n",
+    "    \n",
+    "O usuário deve informar de qual numero ele deseja ver a tabuada. \n",
+    "\n",
+    "A saída deve ser conforme o exemplo abaixo: \n",
+    "\n",
+    "    Tabuada de 5: 5 X 1 = 5 \n",
+    "    \n",
+    "    5 X 2 = 10 ... \n",
+    "    \n",
+    "    5 X 10 = 50 \n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Tabuada: 5\n",
+      "5 X 0 = 0\n",
+      "5 X 1 = 5\n",
+      "5 X 2 = 10\n",
+      "5 X 3 = 15\n",
+      "5 X 4 = 20\n",
+      "5 X 5 = 25\n",
+      "5 X 6 = 30\n",
+      "5 X 7 = 35\n",
+      "5 X 8 = 40\n",
+      "5 X 9 = 45\n",
+      "5 X 10 = 50\n"
+     ]
+    }
+   ],
+   "source": [
+    "lista=[0,1,2,3,4,5,6,7,8,9,10]\n",
+    "tab = int(input(\"Tabuada: \"))\n",
+    "\n",
+    "for num in lista:\n",
+    "    res = tab*num\n",
+    "    print(tab, \"X\", num, \"=\", res)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,... \n",
+    "\n",
+    "Faça um programa capaz de gerar a série até o n−ésimo termo."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Termo: 9\n",
+      "1\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "5\n",
+      "8\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "tem = int(input(\"Termo: \"))\n",
+    "\n",
+    "a = 0\n",
+    "b = 1\n",
+    "\n",
+    "while b < tem:\n",
+    "    print(b)\n",
+    "    a, b = b, a+b\n",
+    "    \n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Fatorial de: 5\n",
+      "120\n"
+     ]
+    }
+   ],
+   "source": [
+    "n = int(input(\"Fatorial de: \"))\n",
+    "fat = 1\n",
+    "\n",
+    "while n > 0:\n",
+    "    \n",
+    "    fat = fat * n\n",
+    "    n-=1\n",
+    "print(fat)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "O Sr. Manoel Joaquim possui uma grande loja de artigos de R$ 1,99, com cerca de 10 caixas. \n",
+    "\n",
+    "Para agilizar o cálculo de quanto cada cliente deve pagar ele desenvolveu um tabela que contém o número de itens que o cliente comprou e ao lado o valor da conta. \n",
+    "\n",
+    "Desta forma a atendente do caixa precisa apenas contar quantos itens o cliente está levando e olhar na tabela de preços. \n",
+    "\n",
+    "Você foi contratado para desenvolver o programa que monta esta tabela de preços, que conterá os preços de 1 até 50 produtos, conforme o exemplo abaixo: \n",
+    "\n",
+    "Lojas Quase Dois - Tabela de preços \n",
+    "\n",
+    "1 - R$ 1.99 \n",
+    "\n",
+    "2 - R$ 3.98 \n",
+    "... \n",
+    "50 - R$ 99.50"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 - 1.99\n",
+      "2 - 3.98\n",
+      "3 - 5.97\n",
+      "4 - 7.96\n",
+      "5 - 9.95\n",
+      "6 - 11.94\n",
+      "7 - 13.93\n",
+      "8 - 15.92\n",
+      "9 - 17.91\n",
+      "10 - 19.9\n",
+      "11 - 21.89\n",
+      "12 - 23.88\n",
+      "13 - 25.87\n",
+      "14 - 27.86\n",
+      "15 - 29.85\n",
+      "16 - 31.84\n",
+      "17 - 33.83\n",
+      "18 - 35.82\n",
+      "19 - 37.81\n",
+      "20 - 39.8\n",
+      "21 - 41.79\n",
+      "22 - 43.78\n",
+      "23 - 45.77\n",
+      "24 - 47.76\n",
+      "25 - 49.75\n",
+      "26 - 51.74\n",
+      "27 - 53.73\n",
+      "28 - 55.72\n",
+      "29 - 57.71\n",
+      "30 - 59.7\n",
+      "31 - 61.69\n",
+      "32 - 63.68\n",
+      "33 - 65.67\n",
+      "34 - 67.66\n",
+      "35 - 69.65\n",
+      "36 - 71.64\n",
+      "37 - 73.63\n",
+      "38 - 75.62\n",
+      "39 - 77.61\n",
+      "40 - 79.6\n",
+      "41 - 81.59\n",
+      "42 - 83.58\n",
+      "43 - 85.57\n",
+      "44 - 87.56\n",
+      "45 - 89.55\n",
+      "46 - 91.54\n",
+      "47 - 93.53\n",
+      "48 - 95.52\n",
+      "49 - 97.51\n",
+      "50 - 99.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "i = 0\n",
+    "for num in range(1, 51):\n",
+    "    res = num * 1.99\n",
+    "    i = i+1\n",
+    "    print(i,'-',res)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "O Sr. Manoel Joaquim acaba de adquirir uma panificadora e pretende implantar a metodologia da tabelinha, que já é um sucesso na sua loja de 1,99. \n",
+    "\n",
+    "Você foi contratado para desenvolver o programa que monta a tabela de preços de pães, de 1 até 50 pães, a partir do preço do pão informado pelo usuário, \n",
+    "\n",
+    "conforme o exemplo abaixo: \n",
+    "\n",
+    "Preço do pão: R$ 0.18 \n",
+    "\n",
+    "Panificadora Pão de Ontem - Tabela de preços \n",
+    "\n",
+    "1 - R$ 0.18 \n",
+    "\n",
+    "2 - R$ 0.36 \n",
+    "... 50 - R$ 9.00 \n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Preço: 0.18\n",
+      "1 - 0.18\n",
+      "2 - 0.36\n",
+      "3 - 0.54\n",
+      "4 - 0.72\n",
+      "5 - 0.8999999999999999\n",
+      "6 - 1.08\n",
+      "7 - 1.26\n",
+      "8 - 1.44\n",
+      "9 - 1.6199999999999999\n",
+      "10 - 1.7999999999999998\n",
+      "11 - 1.98\n",
+      "12 - 2.16\n",
+      "13 - 2.34\n",
+      "14 - 2.52\n",
+      "15 - 2.6999999999999997\n",
+      "16 - 2.88\n",
+      "17 - 3.06\n",
+      "18 - 3.2399999999999998\n",
+      "19 - 3.42\n",
+      "20 - 3.5999999999999996\n",
+      "21 - 3.78\n",
+      "22 - 3.96\n",
+      "23 - 4.14\n",
+      "24 - 4.32\n",
+      "25 - 4.5\n",
+      "26 - 4.68\n",
+      "27 - 4.859999999999999\n",
+      "28 - 5.04\n",
+      "29 - 5.22\n",
+      "30 - 5.3999999999999995\n",
+      "31 - 5.58\n",
+      "32 - 5.76\n",
+      "33 - 5.9399999999999995\n",
+      "34 - 6.12\n",
+      "35 - 6.3\n",
+      "36 - 6.4799999999999995\n",
+      "37 - 6.66\n",
+      "38 - 6.84\n",
+      "39 - 7.02\n",
+      "40 - 7.199999999999999\n",
+      "41 - 7.38\n",
+      "42 - 7.56\n",
+      "43 - 7.739999999999999\n",
+      "44 - 7.92\n",
+      "45 - 8.1\n",
+      "46 - 8.28\n",
+      "47 - 8.459999999999999\n",
+      "48 - 8.64\n",
+      "49 - 8.82\n",
+      "50 - 9.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "p = float(input(\"Preço: \"))\n",
+    "i = 0\n",
+    "for num in range(1, 51):\n",
+    "    res = float(num * p)\n",
+    "    i = i+1\n",
+    "    print(i,'-',res)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 e agora possui uma loja de conveniências. \n",
+    "    \n",
+    "Faça um programa que implemente uma caixa registradora rudimentar. \n",
+    "\n",
+    "O programa deverá receber um número desconhecido de valores referentes aos preços das mercadorias. \n",
+    "\n",
+    "Um valor zero deve ser informado pelo operador para indicar o final da compra. \n",
+    "\n",
+    "O programa deve então mostrar o total da compra e perguntar o valor em dinheiro que o cliente forneceu, para então calcular e mostrar o valor do troco. \n",
+    "\n",
+    "Após esta operação, o programa deverá voltar ao ponto inicial, para registrar a próxima compra. \n",
+    "\n",
+    "A saída deve ser conforme o exemplo abaixo: \n",
+    "\n",
+    "Lojas Tabajara  \n",
+    "\n",
+    "Produto 1: R$ 2.20 \n",
+    "\n",
+    "Produto  2: R$ 5.80 \n",
+    "\n",
+    "Produto 3: R$ 0 \n",
+    "\n",
+    "Total: R$ 9.00 \n",
+    "    \n",
+    "Dinheiro: R$ 20.00 \n",
+    "    \n",
+    "Troco: R$ 11.00 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Valor produto: 2.2\n",
+      "Produto 1 : R$ 2.2\n",
+      "Valor produto: 5.8\n",
+      "Produto 2 : R$ 5.8\n",
+      "Valor produto: 0\n",
+      "Produto 3 : R$ 0.0\n",
+      "Total: 8.0\n",
+      "Dinheiro: 20\n",
+      "Dinheiro: R$ 20\n",
+      "Troco: R$ 12.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "valor = 1\n",
+    "soma = 0\n",
+    "i = 0\n",
+    "while valor != 0:\n",
+    "\n",
+    "    valor = float(input(\"Valor produto: \"))\n",
+    "    soma = soma + valor\n",
+    "    i = i+1\n",
+    "    print('Produto',i,':','R$',valor)\n",
+    "\n",
+    "\n",
+    "print('Total:', soma)\n",
+    "\n",
+    "din = int(input(\"Dinheiro: \"))\n",
+    "print(\"Dinheiro: R$\", din)\n",
+    "troco = din - soma\n",
+    "print(\"Troco: R$\", troco)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
